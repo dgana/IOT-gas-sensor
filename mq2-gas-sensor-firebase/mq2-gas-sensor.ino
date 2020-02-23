@@ -40,7 +40,7 @@ void loop()
 {
   gas = analogRead(gasPin);
   Serial.println(gas);
-  Firebase.setFloat("Gas PPM", gas);
+  Firebase.setFloat("Gas PPM/abcd", gas);
   if (gas > 300) {
     digitalWrite(buzzer, HIGH);
     sendRequest(gas);
